@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
 import Book from './components/Book';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
 import BookList from './components/BookList';
+import Search from './components/Search'; 
 import bookData from './models/books.json';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Header from './components/Header';
-import HomePage from './components/HomePage';
 import About from './pages/About';
-import Search from './components/Search'; 
+import BookcasePage from './pages/BookcasePage';
 
 
 const App = () => {
 
   const [keyword, setKeyword] = useState("");
-  const [books, setBooks] = useState(bookdata);
+  const [books, setBooks] = useState(bookData);
   const [bookcase, setBookcase] =useState ([]);
   
   // function addBook(title) {

@@ -10,10 +10,10 @@ const handleSubmit = (event) =>{
 return
     <div class="search-bar">
         <form onSubmit={(e) => handleSubmit(e)}>
-            <p style={{color:"red"}}>
+            <label>Search</label>
+            <p>
                 <em>{keyword && "Keywords Typed: " + keyword}</em>
             </p>
-            <label>Search</label>
             <input type="text" name="search" value={keyword} onChange={(e) => props.setKeyword(e.target.value)}
         />
         <input type="submit" value="submit"/>
