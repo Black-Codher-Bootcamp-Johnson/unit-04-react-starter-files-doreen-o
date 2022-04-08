@@ -15,12 +15,17 @@ const About = (props) => {
 
                 <div className="page">
                 <h2>Welcome to the Bookcase Application</h2>
-                <p>The following application was created by Doreen Otieno. This bookcase app displays a list of books that a user can save to a local bookcase.
+                <p>The following application was created by Doreen Otieno. I am currently a student of the BlackCodHer Front End Developer Bootcamp.
+                    <br/>
+                    This bookcase app displays a list of books that a user can save to a local bookcase.
+                    <br/>
                     It connects to the Google Books API.
                     <br/>
-                    Click on the "Add Book" buttton to add a book to your bookcase. 
+                    Click on the <b>Add Book </b> buttton to add a book to your bookcase. 
                     <br/>
-                    Use the Search bar to find the latest books by name, author or description.
+                    To remove a book, click on the <b>Remove</b> button.
+                    <br/>
+                    Use the <b>Search</b> bar to find the latest books by name, author or description.
                     </p>
                 </div>
         </div>

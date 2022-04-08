@@ -7,9 +7,9 @@ const HomePage = (props) => {
 
     return(
     <>
-    <Header/>
     <h2> Welcome to Doreen's Bookcase App</h2>
-    <BookList books={books} addBook={addBook}></BookList>
+    <p>Click on the <b>Add Book </b> buttton to add a book to your bookcase.</p>
+    <BookList  books={books} addBook={addBook}></BookList>
 </>
     );
 }

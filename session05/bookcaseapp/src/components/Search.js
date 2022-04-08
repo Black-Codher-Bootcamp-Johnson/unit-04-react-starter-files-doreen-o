@@ -7,19 +7,19 @@ const handleSubmit = (event) =>{
     props.findBooks(keyword);
 }; 
 
-return
-    <div class="search-bar">
+return(
+    <div className="searchBar">
         <form onSubmit={(e) => handleSubmit(e)}>
             <label>Search</label>
-            <p>
-                <em>{keyword && "Keywords Typed: " + keyword}</em>
-            </p>
             <input type="text" name="search" value={keyword} onChange={(e) => props.setKeyword(e.target.value)}
         />
+         <p>
+                <em>{keyword && "Keywords Typed: " + keyword}</em>
+            </p>
         <input type="submit" value="submit"/>
             </form>
     </div>
 
-
+)
 };
 export default Search;

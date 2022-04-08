@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import About from './pages/About';
 import BookcasePage from './pages/BookcasePage';
+import './styles/App.css';
 
 
 const App = () => {
@@ -17,9 +18,6 @@ const App = () => {
   const [books, setBooks] = useState(bookData);
   const [bookcase, setBookcase] =useState ([]);
   
-  // function addBook(title) {
-  // console.log(`The Book ${props.title} was clicked`);
-  // }
   
   async function findBook(keyword) {
   const url = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&filter=paid-ebooks&print-type=books&projection=lite`;
@@ -61,19 +59,21 @@ function removeBook(id){
   return (
   <Router>
     <Header />
+    <Search setKeyword={setKeyword} keyword={keyword} findBook={findBook} />
+    
       <Routes>
       <Route exact path="/" element={
-        <>
+        
           <HomePage books={books} addBook={addBook}></HomePage> 
-            <Search setKeyword={setKeyword} keyword={keyword} findBook={findBook} />
-            </>
+          
+          
       }
       /> 
       <Route path="/bookcase" element={
-        <>
+      
         <BookcasePage bookcase={bookcase} removeBook={removeBook}></BookcasePage>
-        <Search setKeyword={setKeyword} keyword={keyword} findBook={findBook} />
-        </>
+       
+      
       }
       />
       <Route 
